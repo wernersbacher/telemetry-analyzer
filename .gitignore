@@ -1,3 +1,18 @@
+telem/
+
+.idea/
+__pycache__/
+*.pyc
+venv/
+env/
+*.db
+
+*.parquet
+*.ld
+*.ldx
+
+*.log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
