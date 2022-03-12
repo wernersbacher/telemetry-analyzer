@@ -1,7 +1,6 @@
 import os
 
 import analyzer
-import loader
 
 CUR_DIR = os.path.dirname(__file__)
 
@@ -16,6 +15,16 @@ def list_files():
                 yield source_file
 
 
-for file in list_files():
-    analyzer.analyze(file)
+FAST_FILE = "monza-lamborghini_huracan_gt3_evo-14-2022.02.06-14.56.03.ld"
+fast_file_path = os.path.join(TELEM_DIR, FAST_FILE)
+analyzer.analyze(fast_file_path)
+
+print("-"*10)
+
+ANALYZE_FILE = "monza-lamborghini_huracan_gt3_evo-11-2022.02.08-19.23.07.ld"
+analyze_file_path = os.path.join(TELEM_DIR, ANALYZE_FILE)
+analyzer.analyze(analyze_file_path)
+
+#for file in list_files():
+#    analyzer.analyze(file)
 
